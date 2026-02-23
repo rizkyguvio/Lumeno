@@ -1,0 +1,31 @@
+name: Lumeño
+options:
+  bundleIdPrefix: com.gio
+targets:
+  Lumeño:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources: [Sources]
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.gio.Lumeno
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - package: EPUBKit
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen:
+          {}
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+packages:
+  EPUBKit:
+    url: https://github.com/witekbobrowski/EPUBKit
+    from: 0.4.0
